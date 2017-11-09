@@ -10,7 +10,7 @@ router.get('/', (req, res, next) => {
 
   Product.find(criteria, (err, products) => {
     if (err) { return next(err) }
-    
+
     res.render('products/index', {
       products: products
     });
@@ -30,7 +30,7 @@ router.post('/', (req, res, next) => {
     imageUrl: req.body.imageUrl,
     description: req.body.description
   };
-  
+
   // Create a new Product with the params
   const newProduct = new Product(productInfo);
 
@@ -93,29 +93,3 @@ router.post('/:id/delete', (req, res, next) => {
 });
 
 module.exports = router;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
