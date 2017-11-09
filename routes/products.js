@@ -40,7 +40,6 @@ router.post('/', (req, res, next) => {
         product: newProduct
       })
     }
-
     return res.redirect('/products');
   });
 });
